@@ -59,9 +59,8 @@ class CustomViewController: NSViewController {
         
         self.filesData = FBXFileManager.readsFiles(atPath: kCUSTOM_TEMPLATE_FOLDER)!
         
-        self.datas = UserDefaults.standard.value(forKey: kCUSTOM_TEMPLATE_DATA) as! [NSDictionary]
+        self.datas = MouseUserDefult.object(forKey: kCUSTOM_TEMPLATE_DATA) as! [NSDictionary]
         
-        self.datas.append(["url":"hhhh"])
         var configData = self.datas
 //        // 先取出 datas 里 files 没有的数据（配置文件里多余的辣鸡数据）
         for configItem in self.datas {
@@ -281,7 +280,7 @@ class CustomViewController: NSViewController {
     
     func changeTemplateData() {
         
-        UserDefaults.standard.set(self.datas, forKey: kCUSTOM_TEMPLATE_DATA)
+        MouseUserDefult.set(self.datas, forKey: kCUSTOM_TEMPLATE_DATA)
     }
 }
 
@@ -325,12 +324,6 @@ extension CustomViewController : NSTableViewDataSource {
 }
 
 extension CustomViewController : NSTableViewDelegate {
-//    func tableView(_ tableView: NSTableView, shouldSelectRow row: Int) -> Bool {
-//
-//        selectRow = row
-//
-//        return true
-//    }
     
     func tableViewSelectionDidChange(_ notification: Notification) {
         

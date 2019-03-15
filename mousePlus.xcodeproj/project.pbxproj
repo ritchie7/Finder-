@@ -22,6 +22,9 @@
 		F944024D21831E3800123B91 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944024C21831E3800123B91 /* PreferenceViewController.swift */; };
 		F944F0752227C9C800A14321 /* macros.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944F0742227C9C800A14321 /* macros.swift */; };
 		F9471F4222310CC200D2962D /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9471F4122310CC200D2962D /* config.swift */; };
+		F949B5F4223B446700D7953A /* macros.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944F0742227C9C800A14321 /* macros.swift */; };
+		F949B5F5223B448200D7953A /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15D44121D663A6002086F7 /* constant.swift */; };
+		F949B5F6223B963D00D7953A /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9471F4122310CC200D2962D /* config.swift */; };
 		F94F4096219EB444004754BA /* CenterTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F4095219EB444004754BA /* CenterTextFieldCell.swift */; };
 		F94F4098219ED36D004754BA /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F4097219ED36D004754BA /* CustomViewController.swift */; };
 		F95638142186B28F000ED0A6 /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95638132186B28F000ED0A6 /* TemplateViewController.swift */; };
@@ -373,7 +376,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F93EEDCC2182D7060023F0EF /* FinderSync.swift in Sources */,
+				F949B5F4223B446700D7953A /* macros.swift in Sources */,
 				F93EEDD72182D7850023F0EF /* FinderCommChannel.swift in Sources */,
+				F949B5F6223B963D00D7953A /* config.swift in Sources */,
+				F949B5F5223B448200D7953A /* constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

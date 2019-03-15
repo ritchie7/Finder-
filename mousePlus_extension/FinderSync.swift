@@ -14,26 +14,45 @@ class FinderSync: FIFinderSync {
     var myFolderURL = URL(fileURLWithPath: "/")
     var currentURL :String = ""
     
+    var fileName: String = ""
+    var copyState: NSInteger = 0
+    var creatOpenState: NSInteger = 0
+    var submenuState: NSInteger = 0
+    var customData: Array<NSDictionary>!
+    var templateData: Array<NSDictionary>!
+    
     override init() {
         super.init()
         
         
         FIFinderSyncController.default().directoryURLs = [self.myFolderURL]
+//        MouseUserDefult.setValue("未命名文件", forKey: GENERAL_FILE_NAME)
+        self.fileName = MouseUserDefult.string(forKey: GENERAL_FILE_NAME) ?? "新建文件"
+
+////        // 拷贝路径
+        self.copyState = MouseUserDefult.integer(forKey: GENERAL_COPYPATH_SWITCH)
+//
+//        // 新建后打开
+        self.creatOpenState = MouseUserDefult.integer(forKey: GENERAL_FILE_CREAT_OPEN)
+//
+//        // 子菜单方式
+        self.submenuState = MouseUserDefult.integer(forKey: GENERAL_SUBMENU_SWITCH)
         
     }
     
 
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
-        // Produce a menu for the extension.
-        
-//        let datas = 
-        
-        let menu = NSMenu(title: "test")
-        menu.addItem(withTitle: "test2", action: #selector(sampleAction(_:)), keyEquivalent: "")
-        
-//        let menu1 = NSMenu(title: "拷贝路径")
-        menu.addItem(withTitle: "拷贝路径", action: #selector(copyPath(_:)), keyEquivalent: "")
-        
+
+        if self.submenuState != 0 { // 这个值好像没取到...
+            let menu = NSMenu(title: "mouse+")
+            let subMenu1 = NSMenu(title: "mouse+2")
+            let item = NSMenuItem(title: "mouse+", action: nil, keyEquivalent: "")
+            menu.addItem(item)
+            subMenu1.addItem(withTitle: "拷贝路径", action:#selector(copyPath(_:)) , keyEquivalent: "")
+            menu.setSubmenu(subMenu1, for: item)
+            return menu
+        }
+        let menu = NSMenu(title: "mouse+")
         return menu
     }
     
@@ -47,14 +66,15 @@ class FinderSync: FIFinderSync {
     
     @objc func sampleAction(_ sender: AnyObject?) {
 
-        
+//        self.fileName = MouseUserDefult.value(forKey: GENERAL_FILE_NAME) as! String
+
         DispatchQueue.main.async {
             
             let panel = NSSavePanel()
             
             panel.title = "新建文档"
             panel.allowedFileTypes = ["txt"]
-            panel.nameFieldStringValue = "新建文档"
+            panel.nameFieldStringValue = self.fileName
             panel.isExtensionHidden = false
             
             let path = Bundle.main.path(forResource: "Text", ofType: "txt")

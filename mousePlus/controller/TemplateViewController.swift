@@ -40,8 +40,8 @@ class TemplateViewController: NSViewController {
     }
     
     func updateData() {
-        
-        self.datas = UserDefaults.standard.value(forKey: CONFIG_TEMPLATE_DATA) as! [NSDictionary] as! [NSMutableDictionary]
+        MouseUserDefult
+        self.datas = MouseUserDefult.value(forKey: CONFIG_TEMPLATE_DATA) as! [NSDictionary] as! [NSMutableDictionary]
         
 
     }
@@ -111,7 +111,7 @@ class TemplateViewController: NSViewController {
     // MARK: - EVENT
     func changeTemplateData() {
         
-        UserDefaults.standard.set(self.datas, forKey: CONFIG_TEMPLATE_DATA)
+        MouseUserDefult.set(self.datas, forKey: CONFIG_TEMPLATE_DATA)
     }
     
     @IBAction func checkCellSelected(_ sender: NSButtonCell) {

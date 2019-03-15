@@ -8,15 +8,18 @@
 
 import Cocoa
 
+public let MouseUserDefult = UserDefaults(suiteName: USERDEFULT_NAME)!
+
 func configData() {
+    
+    
     
     if (kFIRST_INSTALL()) {
         
-        UserDefaults.standard.setValue("未命名文件", forKey: GENERAL_FILE_NAME)
-        UserDefaults.standard.set(1, forKey: GENERAL_COPYPATH_SWITCH)
-        UserDefaults.standard.set(1, forKey: GENERAL_OPEN_TERMINAL_SWITCH)
-        UserDefaults.standard.set(1, forKey: GENERAL_FILE_CREAT_OPEN)
-        UserDefaults.standard.set(1, forKey: GENERAL_SUBMENU_SWITCH)
+        MouseUserDefult.setValue("未命名文件", forKey: GENERAL_FILE_NAME)
+        MouseUserDefult.set(1, forKey: GENERAL_COPYPATH_SWITCH)
+        MouseUserDefult.set(1, forKey: GENERAL_FILE_CREAT_OPEN)
+        MouseUserDefult.set(0, forKey: GENERAL_SUBMENU_SWITCH)
         
         // 预置模板
         let names = ["txt", "keynot", "pages", "numbers", "word", "excel", "ppt", "md"]
@@ -30,7 +33,7 @@ func configData() {
             
         }
         
-        UserDefaults.standard.set(tempalteData, forKey: CONFIG_TEMPLATE_DATA)
+        MouseUserDefult.set(tempalteData, forKey: CONFIG_TEMPLATE_DATA)
     }
     
     // 放在外面防止被删除

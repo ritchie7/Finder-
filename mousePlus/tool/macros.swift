@@ -8,8 +8,9 @@
 
 import Foundation
 
+let USERDEFULT_NAME = "com.ritchie.mouse.extension_data_name.group"
+
 let GENERAL_COPYPATH_SWITCH = "com.ritchie.mouse.copy_path_switch"
-let GENERAL_OPEN_TERMINAL_SWITCH = "com.ritchie.mouse.open_terminal_swith"
 let GENERAL_FILE_NAME = "com.ritchie.mouse.file_name"
 let GENERAL_FILE_CREAT_OPEN = "com.ritchie.mouse.file_creat_open"
 let GENERAL_SUBMENU_SWITCH = "com.ritchie.mouse.submenu"
