@@ -55,52 +55,9 @@ class CustomViewController: NSViewController {
     }
     
     func updateData() {
-        
-        
-        self.filesData = FBXFileManager.readsFiles(atPath: kCUSTOM_TEMPLATE_FOLDER)!
-        
-        self.datas = MouseUserDefult.object(forKey: kCUSTOM_TEMPLATE_DATA) as! [NSDictionary]
-        
-        var configData = self.datas
-//        // 先取出 datas 里 files 没有的数据（配置文件里多余的辣鸡数据）
-        for configItem in self.datas {
-
-            let configURL = configItem["url"] as! String
-            var have = false
-
-            for fileItem in self.filesData {
-
-                let fileURL = fileItem.absoluteString
-
-                if fileURL == configURL {
-                    have = true
-                    break
-                }
-            }
-
-            if !have { configData.removeAll(where: {$0 === configItem}) }
-        }
 
 
-        // 在 datas 里加入 files 有 datas 没有的数据
-        for fileItem in self.filesData {
-
-            let fileURL = fileItem.absoluteString
-            var have = false
-
-            for configItem in self.datas {
-
-                let configURL = configItem["url"] as! String
-
-                if configURL == fileURL {
-                    have = true
-                    break
-                }
-            }
-            if !have { configData.append(["url":fileURL]) }
-        }
-
-        self.datas = configData
+        self.datas = readCustomTemplateData()
         
         
         self.tableView.reloadData()
@@ -210,7 +167,7 @@ class CustomViewController: NSViewController {
             if result == NSApplication.ModalResponse.alertFirstButtonReturn { // 确认删除
                 
                 var url = self.datas[self.selectRow]["url"] as! String
-                url = url.substring(fromIndex: 7).removingPercentEncoding!
+                url = url.removingPercentEncoding!
                 let success = try? FileManager.default.removeItem(atPath: url)
                 
                 if (success != nil) {
@@ -232,7 +189,36 @@ class CustomViewController: NSViewController {
             
         } else {
             
-            self.addRowEvent(sender)
+//            self.addRowEvent(sender)
+            
+            let path = self.datas[0]["url"] as!String
+            let url = URL.init(fileURLWithPath: path)
+            let panel = NSSavePanel()
+
+            panel.title = "新建文档"
+
+            panel.nameFieldStringValue = "哈哈哈哈哈"
+            panel.isExtensionHidden = false
+            panel.canCreateDirectories = true
+//            panel.directoryURL = 
+            
+            panel.level = NSWindow.Level.floating
+            NSApp.activate(ignoringOtherApps: true)
+            panel.begin(completionHandler: { (result) in
+                if result == NSApplication.ModalResponse.OK {
+                    let directoryURL = panel.url
+                    
+                    let succeed = try? FileManager.default.copyItem(at: url, to: directoryURL!)
+//                    let data = NSData.init(contentsOfFile: url.path)
+                    
+//                    if (succeed == nil) {
+//                        kALERT("创建失败")
+//                    }
+                } else {
+
+                }
+
+            })
         }
         
         NSLog("\(self.datas)")
@@ -253,18 +239,25 @@ class CustomViewController: NSViewController {
     func controlTextDidEndEditing(_ obj: Notification) {
         let cell = self.tableView.selectedCell() as? NSTextFieldCell
         
+        if (cell?.stringValue.length == 0)
+        {
+            kALERT("文件名不能为空")
+            return
+        }
+        
         if (cell?.isKind(of: NSTextFieldCell.self))! {
             let row = self.tableView.selectedRow
             
             let value = cell?.stringValue
-            let srcPtah = self.filesData[row]
+            let srcPtah = self.datas[row]["url"] as! String
             
+            let srcURL = NSURL.init(string: srcPtah)!
             
-            let name = srcPtah.deletingPathExtension().lastPathComponent.removingPercentEncoding
-            let dstPath = srcPtah.absoluteString.removingPercentEncoding!.replace(of: name!, with: value!)
+            let name = srcURL.deletingPathExtension!.lastPathComponent.removingPercentEncoding
+            let dstPath = srcURL.absoluteString!.removingPercentEncoding!.replace(of: name!, with: value!)
             
-            let srcStr = srcPtah.absoluteString.removingPercentEncoding?.substring(fromIndex: 7)
-            let dstStr = dstPath.substring(fromIndex: 7)
+            let srcStr = srcURL.absoluteString!.removingPercentEncoding
+            let dstStr = dstPath
             _ = try? FileManager.default.moveItem(atPath: srcStr!, toPath: dstStr)
             
             self.updateData()
@@ -294,7 +287,8 @@ extension CustomViewController : NSTableViewDataSource {
     func tableView(_ tableView: NSTableView, objectValueFor tableColumn: NSTableColumn?, row: Int) -> Any? {
         
         let data = self.datas[row]
-        let url = URL.init(string: data["url"] as! String)!
+        let path = data["url"] as! String
+        let url = URL.init(fileURLWithPath: path)
         
         // 表格列标识
         let key = tableColumn?.identifier

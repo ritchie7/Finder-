@@ -11,17 +11,8 @@ import Cocoa
 class FBXFileManager: NSObject {
 
     // 获取文件夹下所有文件路径
-    static func readsFiles(atPath : String) -> [URL]? {
-//        do {
-//            return try FileManager.default.contentsOfDirectory(atPath: atPath)
-//        }
-//        catch
-//        {
-//            kALERT("路径错误")
-//            return nil
-//        }
-//        atPath = "/Users/fengxuechuan/Desktop/"
-//        let path = "/Users/fengxuechuan/Desktop/"
+    func readsFiles(atPath : String) -> [URL]? {
+        
         let exist = FileManager.default.fileExists(atPath: atPath)
         if !exist {
             
@@ -36,3 +27,5 @@ class FBXFileManager: NSObject {
     
     
 }
+
+

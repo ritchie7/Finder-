@@ -17,6 +17,7 @@
 		F93EEDD12182D7060023F0EF /* mousePlus_extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F93EEDC92182D7050023F0EF /* mousePlus_extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F93EEDD72182D7850023F0EF /* FinderCommChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EEDD62182D7850023F0EF /* FinderCommChannel.swift */; };
 		F93EEDDC2182DFA70023F0EF /* PreferenceWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EEDDA2182DFA70023F0EF /* PreferenceWindowController.swift */; };
+		F93F40262242358500F9B52D /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93F9B452238D1600044271E /* String+Ext.swift */; };
 		F93F9B462238D1600044271E /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93F9B452238D1600044271E /* String+Ext.swift */; };
 		F944024821831AA400123B91 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944024621831AA400123B91 /* GeneralViewController.swift */; };
 		F944024D21831E3800123B91 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944024C21831E3800123B91 /* PreferenceViewController.swift */; };
@@ -24,7 +25,6 @@
 		F9471F4222310CC200D2962D /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9471F4122310CC200D2962D /* config.swift */; };
 		F949B5F4223B446700D7953A /* macros.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944F0742227C9C800A14321 /* macros.swift */; };
 		F949B5F5223B448200D7953A /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15D44121D663A6002086F7 /* constant.swift */; };
-		F949B5F6223B963D00D7953A /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9471F4122310CC200D2962D /* config.swift */; };
 		F94F4096219EB444004754BA /* CenterTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F4095219EB444004754BA /* CenterTextFieldCell.swift */; };
 		F94F4098219ED36D004754BA /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F4097219ED36D004754BA /* CustomViewController.swift */; };
 		F95638142186B28F000ED0A6 /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95638132186B28F000ED0A6 /* TemplateViewController.swift */; };
@@ -44,6 +44,8 @@
 		F973F40E219BDF30008D3430 /* txt.txt in Resources */ = {isa = PBXBuildFile; fileRef = F973F3EE219BDF30008D3430 /* txt.txt */; };
 		F973F40F219BDF30008D3430 /* keynot.key in Resources */ = {isa = PBXBuildFile; fileRef = F973F3EF219BDF30008D3430 /* keynot.key */; };
 		F973F410219BDF30008D3430 /* keynot.key in Resources */ = {isa = PBXBuildFile; fileRef = F973F3EF219BDF30008D3430 /* keynot.key */; };
+		F9E0EC82223F4B20005F9ECA /* FBXFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15D44421D672B6002086F7 /* FBXFileManager.swift */; };
+		F9E0EC84223F4B97005F9ECA /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9471F4122310CC200D2962D /* config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -375,10 +377,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E0EC82223F4B20005F9ECA /* FBXFileManager.swift in Sources */,
+				F93F40262242358500F9B52D /* String+Ext.swift in Sources */,
 				F93EEDCC2182D7060023F0EF /* FinderSync.swift in Sources */,
 				F949B5F4223B446700D7953A /* macros.swift in Sources */,
+				F9E0EC84223F4B97005F9ECA /* config.swift in Sources */,
 				F93EEDD72182D7850023F0EF /* FinderCommChannel.swift in Sources */,
-				F949B5F6223B963D00D7953A /* config.swift in Sources */,
 				F949B5F5223B448200D7953A /* constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

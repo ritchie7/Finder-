@@ -40,7 +40,7 @@ class TemplateViewController: NSViewController {
     }
     
     func updateData() {
-        MouseUserDefult
+//        MouseUserDefult
         self.datas = MouseUserDefult.value(forKey: CONFIG_TEMPLATE_DATA) as! [NSDictionary] as! [NSMutableDictionary]
         
 
@@ -148,13 +148,11 @@ extension TemplateViewController : NSTableViewDataSource {
         // 表格列标识
         let key = tableColumn?.identifier
         if (key!.rawValue == "image") {
+            let path = data["url"] as! String
+            let url = NSURL.init(string: path)
+            let name = url!.deletingPathExtension!.lastPathComponent.removingPercentEncoding!
             
-            let image = data["image"] as! String
-            let suffix = data["suffix"] as! String
-            
-            let path = Bundle.main.path(forResource: image , ofType: suffix)
-            
-            return NSImage.init(named: image)
+            return NSImage.init(named: name)!
         }
         
         let value = data[key!]

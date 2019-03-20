@@ -8,7 +8,7 @@
 
 import Foundation
 
-let USERDEFULT_NAME = "com.ritchie.mouse.extension_data_name.group"
+let USERDEFULT_NAME = "group.ritchie.mousePlus"
 
 let GENERAL_COPYPATH_SWITCH = "com.ritchie.mouse.copy_path_switch"
 let GENERAL_FILE_NAME = "com.ritchie.mouse.file_name"

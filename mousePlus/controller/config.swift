@@ -8,13 +8,13 @@
 
 import Cocoa
 
+
 public let MouseUserDefult = UserDefaults(suiteName: USERDEFULT_NAME)!
 
+   
 func configData() {
     
-    
-    
-    if (kFIRST_INSTALL()) {
+    if !(kFIRST_INSTALL()) {
         
         MouseUserDefult.setValue("未命名文件", forKey: GENERAL_FILE_NAME)
         MouseUserDefult.set(1, forKey: GENERAL_COPYPATH_SWITCH)
@@ -24,22 +24,27 @@ func configData() {
         // 预置模板
         let names = ["txt", "keynot", "pages", "numbers", "word", "excel", "ppt", "md"]
         let sufixs = ["txt", "key", "pages", "numbers", "docx", "xlsx", "pptx", "md"]
-        let images = ["txt", "keynot", "pages", "numbers", "word", "excel", "ppt", "md"]
+//        let images = ["txt", "keynot", "pages", "numbers", "word", "excel", "ppt", "md"]
         var tempalteData = Array<NSDictionary>()
-
+        
         for idx in 0...(names.count - 1) {
             
-            tempalteData.append(["name":names[idx], "check":1, "image":images[idx], "suffix":sufixs[idx]])
+            let path = Bundle.main.path(forResource: names[idx], ofType: sufixs[idx])!
+            
+            tempalteData.append(["name":names[idx], "check":1, "url":path])
             
         }
+        
+        let tmps = Array<NSDictionary>()
+        MouseUserDefult.set(tmps, forKey: kCUSTOM_TEMPLATE_DATA)
         
         MouseUserDefult.set(tempalteData, forKey: CONFIG_TEMPLATE_DATA)
     }
     
     // 放在外面防止被删除
     // 自定义模板
-//    let tmps = Array<NSDictionary>()
-//    UserDefaults.standard.set(tmps, forKey: kCUSTOM_TEMPLATE_DATA)
+    //    let tmps = Array<NSDictionary>()
+    //    UserDefaults.standard.set(tmps, forKey: kCUSTOM_TEMPLATE_DATA)
     
     let manager = FileManager.default
     
@@ -56,5 +61,65 @@ func configData() {
     }
 }
 
+func readCustomTemplateData() -> Array<NSDictionary> {
+    
+    let filesData = readsFiles(atPath: kCUSTOM_TEMPLATE_FOLDER)!
+//        let filesData = FBXFileManager.readsFiles(atPath: kCUSTOM_TEMPLATE_FOLDER)!
+    
+    let datas = MouseUserDefult.object(forKey: kCUSTOM_TEMPLATE_DATA) as! [NSDictionary]
+    
+    var configData = datas
+    //        // 先取出 datas 里 files 没有的数据（配置文件里多余的辣鸡数据）
+    for configItem in datas {
+        
+        let configURL = configItem["url"] as! String
+        var have = false
+        
+        for fileItem in filesData {
+            
+            let fileURL = fileItem.absoluteString
+            
+            if fileURL == configURL {
+                have = true
+                break
+            }
+        }
+        
+        if !have { configData.removeAll(where: {$0 === configItem}) }
+    }
+    
+    
+    // 在 datas 里加入 files 有 datas 没有的数据
+    for fileItem in filesData {
+        
+        let fileURL = fileItem.path
+        var have = false
+        
+        for configItem in datas {
+            
+            let configURL = configItem["url"] as! String
+            
+            if configURL == fileURL {
+                have = true
+                break
+            }
+        }
+        let name = fileItem.deletingPathExtension().lastPathComponent.removingPercentEncoding!
+        if !have { configData.append(["url":fileURL, "name": name]) }
+    }
+    return configData
+}
 
-
+func readsFiles(atPath : String) -> [URL]? {
+    
+    let exist = FileManager.default.fileExists(atPath: atPath)
+    if !exist {
+        
+        print("不存在该路径")
+        return nil
+    }
+    //        let files = try?FileManager.default.contentsOfDirectory(atPath: atPath)
+    let files = try? FileManager.default.contentsOfDirectory(at: URL.init(string: atPath)!, includingPropertiesForKeys: nil, options: FileManager.DirectoryEnumerationOptions.skipsHiddenFiles)
+    return files
+    
+}
