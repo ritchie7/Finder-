@@ -14,7 +14,7 @@ public let MouseUserDefult = UserDefaults(suiteName: USERDEFULT_NAME)!
    
 func configData() {
     
-    if !(kFIRST_INSTALL()) {
+    if (kFIRST_INSTALL()) {
         
         MouseUserDefult.setValue("未命名文件", forKey: GENERAL_FILE_NAME)
         MouseUserDefult.set(1, forKey: GENERAL_COPYPATH_SWITCH)
@@ -24,7 +24,7 @@ func configData() {
         // 预置模板
         let names = ["txt", "keynot", "pages", "numbers", "word", "excel", "ppt", "md"]
         let sufixs = ["txt", "key", "pages", "numbers", "docx", "xlsx", "pptx", "md"]
-//        let images = ["txt", "keynot", "pages", "numbers", "word", "excel", "ppt", "md"]
+        
         var tempalteData = Array<NSDictionary>()
         
         for idx in 0...(names.count - 1) {
@@ -43,8 +43,6 @@ func configData() {
     
     // 放在外面防止被删除
     // 自定义模板
-    //    let tmps = Array<NSDictionary>()
-    //    UserDefaults.standard.set(tmps, forKey: kCUSTOM_TEMPLATE_DATA)
     
     let manager = FileManager.default
     
@@ -56,15 +54,19 @@ func configData() {
         
     } else {
         
-        //            NSArray.init(contentsOf: NSURL.fileURL(withPath: kCUSTOM_TEMPLATE_FOLDER))
-        //            print(files)
     }
 }
 
 func readCustomTemplateData() -> Array<NSDictionary> {
     
-    let filesData = readsFiles(atPath: kCUSTOM_TEMPLATE_FOLDER)!
+    var filesData = readsFiles(atPath: kCUSTOM_TEMPLATE_FOLDER)!
 //        let filesData = FBXFileManager.readsFiles(atPath: kCUSTOM_TEMPLATE_FOLDER)!
+    var tmpData = Array<String>()
+    for item in filesData {
+        let path = kCUSTOM_TEMPLATE_FOLDER + "/" + item
+        tmpData.append(path)
+    }
+    filesData = tmpData
     
     let datas = MouseUserDefult.object(forKey: kCUSTOM_TEMPLATE_DATA) as! [NSDictionary]
     
@@ -77,7 +79,7 @@ func readCustomTemplateData() -> Array<NSDictionary> {
         
         for fileItem in filesData {
             
-            let fileURL = fileItem.absoluteString
+            let fileURL = fileItem
             
             if fileURL == configURL {
                 have = true
@@ -92,7 +94,7 @@ func readCustomTemplateData() -> Array<NSDictionary> {
     // 在 datas 里加入 files 有 datas 没有的数据
     for fileItem in filesData {
         
-        let fileURL = fileItem.path
+        let fileURL = fileItem
         var have = false
         
         for configItem in datas {
@@ -104,13 +106,14 @@ func readCustomTemplateData() -> Array<NSDictionary> {
                 break
             }
         }
-        let name = fileItem.deletingPathExtension().lastPathComponent.removingPercentEncoding!
+        let fileURLPath = NSURL.init(fileURLWithPath: fileURL)
+        let name = fileURLPath.deletingPathExtension!.lastPathComponent.removingPercentEncoding!
         if !have { configData.append(["url":fileURL, "name": name]) }
     }
     return configData
 }
 
-func readsFiles(atPath : String) -> [URL]? {
+func readsFiles(atPath : String) -> [String]? {
     
     let exist = FileManager.default.fileExists(atPath: atPath)
     if !exist {
@@ -119,7 +122,8 @@ func readsFiles(atPath : String) -> [URL]? {
         return nil
     }
     //        let files = try?FileManager.default.contentsOfDirectory(atPath: atPath)
-    let files = try? FileManager.default.contentsOfDirectory(at: URL.init(string: atPath)!, includingPropertiesForKeys: nil, options: FileManager.DirectoryEnumerationOptions.skipsHiddenFiles)
+//    let files = try? FileManager.default.contentsOfDirectory(at: URL.init(string: atPath)!, includingPropertiesForKeys: nil, options: FileManager.DirectoryEnumerationOptions.skipsHiddenFiles)
+    let files = try? FileManager.default.contentsOfDirectory(atPath: atPath)
     return files
     
 }

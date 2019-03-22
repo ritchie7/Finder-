@@ -38,6 +38,8 @@ class CustomViewController: NSViewController {
         
         self.preferredContentSize = view.frame.size
         
+//        let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: USERDEFULT_NAME)
+        
         self.tableviewConfig()
         self.updateData()
         
@@ -168,7 +170,7 @@ class CustomViewController: NSViewController {
                 
                 var url = self.datas[self.selectRow]["url"] as! String
                 url = url.removingPercentEncoding!
-                let success = try? FileManager.default.removeItem(atPath: url)
+                let success = try? FileManager.default.removeItem(at: URL.init(fileURLWithPath: url))
                 
                 if (success != nil) {
                     
@@ -189,40 +191,8 @@ class CustomViewController: NSViewController {
             
         } else {
             
-//            self.addRowEvent(sender)
-            
-            let path = self.datas[0]["url"] as!String
-            let url = URL.init(fileURLWithPath: path)
-            let panel = NSSavePanel()
-
-            panel.title = "新建文档"
-
-            panel.nameFieldStringValue = "哈哈哈哈哈"
-            panel.isExtensionHidden = false
-            panel.canCreateDirectories = true
-//            panel.directoryURL = 
-            
-            panel.level = NSWindow.Level.floating
-            NSApp.activate(ignoringOtherApps: true)
-            panel.begin(completionHandler: { (result) in
-                if result == NSApplication.ModalResponse.OK {
-                    let directoryURL = panel.url
-                    
-                    let succeed = try? FileManager.default.copyItem(at: url, to: directoryURL!)
-//                    let data = NSData.init(contentsOfFile: url.path)
-                    
-//                    if (succeed == nil) {
-//                        kALERT("创建失败")
-//                    }
-                } else {
-
-                }
-
-            })
+            self.addRowEvent(sender)
         }
-        
-        NSLog("\(self.datas)")
-        
     }
     
     @IBAction func checkAction(_ check: NSButton) {
@@ -251,14 +221,19 @@ class CustomViewController: NSViewController {
             let value = cell?.stringValue
             let srcPtah = self.datas[row]["url"] as! String
             
-            let srcURL = NSURL.init(string: srcPtah)!
+            let srcURL = URL.init(fileURLWithPath: srcPtah)
             
-            let name = srcURL.deletingPathExtension!.lastPathComponent.removingPercentEncoding
-            let dstPath = srcURL.absoluteString!.removingPercentEncoding!.replace(of: name!, with: value!)
+            let name = srcURL.deletingPathExtension().lastPathComponent.removingPercentEncoding
+            let dstPath = srcURL.path.removingPercentEncoding!.replace(of: name!, with: value!)
             
-            let srcStr = srcURL.absoluteString!.removingPercentEncoding
+            let srcStr = srcURL.path.removingPercentEncoding
             let dstStr = dstPath
-            _ = try? FileManager.default.moveItem(atPath: srcStr!, toPath: dstStr)
+            
+            do {
+                try FileManager.default.moveItem(atPath: srcStr!, toPath: dstStr)
+            } catch {
+                kALERT(error.localizedDescription)
+            }
             
             self.updateData()
         }

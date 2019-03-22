@@ -25,5 +25,8 @@ let CONFIG_INSTALL_FIRST = "com.ritchie.mouse.install_first"
 //
 //let docURL = kPATH_DOCUMENT + "/\(kTEMPLATE_FOLDER)"
 //let configURL = kPATH_PREFER + "/\(kTEMPLATE_CONFIG)" + "/\(kPLIST_CONFIG)"
-let kCUSTOM_TEMPLATE_FOLDER = kPATH_DOCUMENT + "/com.ritchie.mouse.custom_template_folder"
+let kCUSTOM_TEMPLATE_FOLDER = kGROUPPATH! + "/Library/com.ritchie.mouse.custom_template_folder"
 let kCUSTOM_TEMPLATE_DATA = "com.ritchie.mouse.custom_templete_data"
+
+
+

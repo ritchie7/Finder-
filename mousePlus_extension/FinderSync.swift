@@ -21,7 +21,6 @@ class FinderSync: FIFinderSync {
     var customData = [NSDictionary]()
     var templateData = [NSDictionary]()
     
-    var menuArray: Array<Array<MenuModel>>!
     
     var customMenu: NSMenu?
     var preinstallMenu: NSMenu?
@@ -43,7 +42,7 @@ class FinderSync: FIFinderSync {
         // 子菜单方式
         self.submenuState = MouseUserDefult.integer(forKey: GENERAL_SUBMENU_SWITCH)
 
-//        self.customData = readCustomTemplateData()
+        
         self.customData = MouseUserDefult.value(forKey: kCUSTOM_TEMPLATE_DATA) as! [NSDictionary]
 //
         self.templateData = MouseUserDefult.value(forKey: CONFIG_TEMPLATE_DATA) as! [NSMutableDictionary]
@@ -89,45 +88,41 @@ class FinderSync: FIFinderSync {
     
     @objc func creatFile(url: URL)  {
         
+        
+        let path = FIFinderSyncController.default().targetedURL()?.path
         DispatchQueue.main.async {
             
             let panel = NSSavePanel()
             
             panel.title = "新建文档"
             
-            
             panel.nameFieldStringValue = self.fileName
             panel.isExtensionHidden = false
             panel.canCreateDirectories = true
-            panel.directoryURL = FIFinderSyncController.default().targetedURL()
+            
+            panel.directoryURL = URL.init(fileURLWithPath: path!)
+            panel.allowedFileTypes = [url.pathExtension]
             
             panel.level = NSWindow.Level.floating
             NSApp.activate(ignoringOtherApps: true)
+            
+            
             panel.begin(completionHandler: { (result) in
                 if result == NSApplication.ModalResponse.OK {
                     
-//                    let directoryURL =
-//                    let succeed = try? FileManager.default.copyItem(at: url, to: panel.url!)
-                    
-//                    let succeed = try? "hhhhhh".write(to: panel.url!, atomically: true, encoding: String.Encoding.utf8)
-//                    let data = NSData.init(contentsOfFile: url.path)
+                    let dstURL = panel.url?.path
                     do {
-                        let succeed = try FileManager.default.copyItem(at: url, to: panel.url!)
-
+                        
+                        try FileManager.default.copyItem(atPath: url.path, toPath: dstURL!)
+                        
                     } catch {
-                        let e = error
                         kALERT(error.localizedDescription)
 
                     }
-//                    if (succeed == nil) {
-//                        kALERT("创建失败")
-//                    }
-                } else {
-                    
                 }
-                
             })
         }
+
     }
     
     func getURL(title: String, data: Array<NSDictionary>) -> URL {
@@ -136,6 +131,13 @@ class FinderSync: FIFinderSync {
             let name = dict["name"] as! String
             if name == title {
                 let path = dict["url"] as! String
+                if (dict["check"] != nil) {
+//                    let urlStr =
+                    let url = NSURL.init(fileURLWithPath: path)
+                    let currentPath = Bundle.main.path(forResource: name, ofType: url.pathExtension)
+                    return URL.init(fileURLWithPath: currentPath!)
+                }
+                
                 return URL.init(fileURLWithPath: path)
                 
             }
@@ -150,8 +152,6 @@ class FinderSync: FIFinderSync {
             menu.addItem(withTitle: "拷贝路径", action:#selector(copyPath(_:)) , keyEquivalent: "")
         }
         
-        if self.templateData.count == 0 && self.customData.count == 0 {return menu}
-        
         let fileItem = NSMenuItem(title: "新建文件", action: nil, keyEquivalent: "")
         fileItem.representedObject = "哈哈哈哈哈哈"
         menu.addItem(fileItem)
@@ -162,14 +162,18 @@ class FinderSync: FIFinderSync {
             
             for data in self.templateData {
                 
-                
-                let name = data["name"] as! String
-                let menuItem = NSMenuItem.init(title: name, action: #selector(FinderSync.creatPreinstallFile(_:)), keyEquivalent: "")
-                self.preinstallMenu!.addItem(menuItem)
-                
+                if data["check"] as! Int == 1 {
+                    let name = data["name"] as! String
+                    let menuItem = NSMenuItem.init(title: name, action: #selector(FinderSync.creatPreinstallFile(_:)), keyEquivalent: "")
+                    self.preinstallMenu!.addItem(menuItem)
+                }
+
             }
             
             menu.setSubmenu(self.preinstallMenu, for: fileItem)
+            if self.preinstallMenu?.items.count == 0 {
+                menu.removeItem(fileItem)
+            }
         }
         
         
@@ -196,23 +200,3 @@ class FinderSync: FIFinderSync {
         return menu
     }
 }
-
-class MenuModel: NSObject {
-    var url: String = ""
-    var name: String = ""
-    
-    override init() {
-        super.init()
-    }
-    
-    init(url: String, name: String) {
-        self.url = url
-        self.name = name
-    }
-}
-
-//extension FinderSync: NSOpenSavePanelDelegate {
-//    func panel(_ sender: Any, willExpand expanding: Bool) {
-//
-//    }
-//}

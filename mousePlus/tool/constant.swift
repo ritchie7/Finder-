@@ -15,6 +15,7 @@ let kPATH_LIBRARY = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDi
 let kPATH_CACHE = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.cachesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
 let kPATH_PREFER = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.preferencePanesDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0]
 
+let kGROUPPATH = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: USERDEFULT_NAME)?.path
 
 
 // MARK: - COLOR
