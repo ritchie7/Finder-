@@ -24,8 +24,6 @@ class AppCommChannel: NSObject {
     @objc func mousePlusActionObserving(noti : Notification)  {
         
     }
-    
-    
 }
 
 
