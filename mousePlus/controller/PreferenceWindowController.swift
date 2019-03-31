@@ -13,7 +13,10 @@ class PreferenceWindowController: NSWindowController, NSWindowDelegate {
     override func windowDidLoad() {
         super.windowDidLoad()
         
-        
+        self.window?.styleMask.remove(.resizable)
+//        self.window!.standardWindowButton(.zoomButton)!.isHidden = true
+//        self.window?.standardWindowButton(.miniaturizeButton)?.isHidden = true
+
     }
     
 //    func windowShouldClose(_ sender: NSWindow) -> Bool {

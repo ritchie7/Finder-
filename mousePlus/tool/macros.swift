@@ -29,4 +29,7 @@ let kCUSTOM_TEMPLATE_FOLDER = kGROUPPATH! + "/Library/com.ritchie.mouse.custom_t
 let kCUSTOM_TEMPLATE_DATA = "com.ritchie.mouse.custom_templete_data"
 
 
+let kMousePlusActionObservingNotification = "MousePlusActionObservingNotification"
+let kMousePlusExtensionObservingNotification = "MousePlusExtensionObservingNotification"
+
 

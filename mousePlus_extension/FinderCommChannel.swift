@@ -10,14 +10,16 @@ import Cocoa
 
 class FinderCommChannel: NSObject {
 
+    var finder: FinderSync?
+    
     func setup() {
 //        var noti =
-        DistributedNotificationCenter.default().addObserver(self, selector: #selector(preferencesObserving), name: Notification.Name(rawValue: "PreferencesObservingNotification"), object: nil)
+        DistributedNotificationCenter.default().addObserver(self, selector: #selector(preferencesObserving), name: Notification.Name(rawValue: kMousePlusExtensionObservingNotification), object: nil)
     }
     
-    func postNotification(name : String, info : Any) {
-        
-    }
+//    func postNotification(name : String, info : Any) {
+//        
+//    }
     
     @objc func preferencesObserving(noti : Notification) {
         

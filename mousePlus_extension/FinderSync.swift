@@ -31,27 +31,17 @@ class FinderSync: FIFinderSync {
         
         FIFinderSyncController.default().directoryURLs = [self.myFolderURL]
         
-        self.fileName = MouseUserDefult.string(forKey: GENERAL_FILE_NAME) ?? "新建文件"
-
-        // 拷贝路径
-        self.copyState = MouseUserDefult.integer(forKey: GENERAL_COPYPATH_SWITCH)
-//
-        // 新建后打开
-        self.creatOpenState = MouseUserDefult.integer(forKey: GENERAL_FILE_CREAT_OPEN)
-//
-        // 子菜单方式
-        self.submenuState = MouseUserDefult.integer(forKey: GENERAL_SUBMENU_SWITCH)
-
+        let channel = FinderCommChannel.init()
+        channel.setup()
+        channel.finder = self
         
-        self.customData = MouseUserDefult.value(forKey: kCUSTOM_TEMPLATE_DATA) as! [NSDictionary]
-//
-        self.templateData = MouseUserDefult.value(forKey: CONFIG_TEMPLATE_DATA) as! [NSMutableDictionary]
+        self.getData()
 
     }
     
 
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
-
+        
         if self.submenuState == 1 { // 子菜单方式显示
             let menu = NSMenu(title: "mouse+")
             let subMenu1 = self.subMenu()
@@ -142,11 +132,11 @@ class FinderSync: FIFinderSync {
                 
             }
         }
-        return URL.init(string: "mouse+")!
+        return URL.init(string: "Finder+")!
     }
     
     func subMenu() -> NSMenu {
-        let menu = NSMenu(title: "mouse+")
+        let menu = NSMenu(title: "Finder+")
         
         if self.copyState == 1 {
             menu.addItem(withTitle: "拷贝路径", action:#selector(copyPath(_:)) , keyEquivalent: "")
@@ -199,4 +189,29 @@ class FinderSync: FIFinderSync {
         
         return menu
     }
+    
+    func getData() {
+        
+        self.fileName = MouseUserDefult.string(forKey: GENERAL_FILE_NAME) ?? "新建文件"
+        
+        // 拷贝路径
+        self.copyState = MouseUserDefult.integer(forKey: GENERAL_COPYPATH_SWITCH)
+        //
+        // 新建后打开
+        self.creatOpenState = MouseUserDefult.integer(forKey: GENERAL_FILE_CREAT_OPEN)
+        //
+        // 子菜单方式
+        self.submenuState = MouseUserDefult.integer(forKey: GENERAL_SUBMENU_SWITCH)
+        
+        
+        self.customData = MouseUserDefult.value(forKey: kCUSTOM_TEMPLATE_DATA) as! [NSDictionary]
+        //
+        self.templateData = MouseUserDefult.value(forKey: CONFIG_TEMPLATE_DATA) as! [NSMutableDictionary]
+    }
+
+    
+//    func reloadConfig() {
+//
+//    }
 }
+

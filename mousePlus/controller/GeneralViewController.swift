@@ -10,6 +10,19 @@ import Cocoa
 
 class GeneralViewController: NSViewController {
     
+//    lazy var connection: NSXPCConnection = {
+//        //创建connection服务
+//        let connection = NSXPCConnection(serviceName: "ritchie.Helper")
+//        //注册协议接口
+//        connection.remoteObjectInterface = NSXPCInterface(with: HelperProtocol.self)
+//        //同步等待连接建立
+//        connection.resume()
+//        return connection
+//    }()
+//
+//    deinit {
+//        self.connection.invalidate()
+//    }
     
     @IBOutlet weak var openFile: NSButton!
     
@@ -21,10 +34,16 @@ class GeneralViewController: NSViewController {
     
 //    let userDefult = UserDefaults(suiteName: USERDEFULT_NAME)!
     
+    var finder :AppCommChannel = AppCommChannel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.preferredContentSize = view.frame.size
+        
+//        finder.setup()
+        
+        
         
         configData()
         
@@ -50,13 +69,18 @@ class GeneralViewController: NSViewController {
     
     // MARK: - Action
     @IBAction func copyPathSwitchAction(_ sender: NSButton) {
-        MouseUserDefult.set(sender.state, forKey: GENERAL_COPYPATH_SWITCH)
+//        self.testXPC()
+        self.finder.postNotification(name: "")
+//        MouseUserDefult.set(sender.state, forKey: GENERAL_COPYPATH_SWITCH)
+//        self.finder.postNotification(name: kMousePlusExtensionObservingNotification)
     }
     @IBAction func openFileAfterCreatSwitchAction(_ sender: NSButton) {
         MouseUserDefult.set(sender.state, forKey: GENERAL_FILE_CREAT_OPEN)
+        self.finder.postNotification(name: kMousePlusExtensionObservingNotification)
     }
     @IBAction func submenuSwitchAction(_ sender: NSButton) {
         MouseUserDefult.set(sender.state, forKey: GENERAL_SUBMENU_SWITCH)
+        self.finder.postNotification(name: kMousePlusExtensionObservingNotification)
     }
     @IBAction func systemConfgAction(_ sender: Any) {
         
@@ -73,8 +97,15 @@ class GeneralViewController: NSViewController {
         
         // 成为焦点窗口
         NSWorkspace.shared.launchApplication(withBundleIdentifier: "com.apple.systempreferences", options: [], additionalEventParamDescriptor: nil, launchIdentifier: nil)
-        
     }
+    
+//    func testXPC()  {
+//        let helper = self.connection.remoteObjectProxyWithErrorHandler {
+//            (error) in print("remote proxy error: \(error)")
+//            } as! HelperProtocol
+//        
+//        helper.reloadConfig!()
+//    }
 }
 
 extension GeneralViewController: NSTextFieldDelegate {
@@ -84,3 +115,4 @@ extension GeneralViewController: NSTextFieldDelegate {
         MouseUserDefult.setValue(self.fileNameTextField.stringValue, forKey: GENERAL_FILE_NAME)
     }
 }
+
