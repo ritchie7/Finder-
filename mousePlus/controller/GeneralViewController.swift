@@ -70,17 +70,17 @@ class GeneralViewController: NSViewController {
     // MARK: - Action
     @IBAction func copyPathSwitchAction(_ sender: NSButton) {
 //        self.testXPC()
-        self.finder.postNotification(name: "")
-//        MouseUserDefult.set(sender.state, forKey: GENERAL_COPYPATH_SWITCH)
+//        self.finder.postNotification(name: "")
+        MouseUserDefult.set(sender.state, forKey: GENERAL_COPYPATH_SWITCH)
 //        self.finder.postNotification(name: kMousePlusExtensionObservingNotification)
     }
     @IBAction func openFileAfterCreatSwitchAction(_ sender: NSButton) {
         MouseUserDefult.set(sender.state, forKey: GENERAL_FILE_CREAT_OPEN)
-        self.finder.postNotification(name: kMousePlusExtensionObservingNotification)
+//        self.finder.postNotification(name: kMousePlusExtensionObservingNotification)
     }
     @IBAction func submenuSwitchAction(_ sender: NSButton) {
         MouseUserDefult.set(sender.state, forKey: GENERAL_SUBMENU_SWITCH)
-        self.finder.postNotification(name: kMousePlusExtensionObservingNotification)
+//        self.finder.postNotification(name: kMousePlusExtensionObservingNotification)
     }
     @IBAction func systemConfgAction(_ sender: Any) {
         

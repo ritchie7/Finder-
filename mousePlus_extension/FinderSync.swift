@@ -31,17 +31,17 @@ class FinderSync: FIFinderSync {
         
         FIFinderSyncController.default().directoryURLs = [self.myFolderURL]
         
-        let channel = FinderCommChannel.init()
-        channel.setup()
-        channel.finder = self
+//        let channel = FinderCommChannel.init()
+//        channel.setup()
+//        channel.finder = self
         
-        self.getData()
+        
 
     }
     
 
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
-        
+        self.getData()
         if self.submenuState == 1 { // 子菜单方式显示
             let menu = NSMenu(title: "mouse+")
             let subMenu1 = self.subMenu()
@@ -213,5 +213,9 @@ class FinderSync: FIFinderSync {
 //    func reloadConfig() {
 //
 //    }
+    
+    
+        
 }
+
 

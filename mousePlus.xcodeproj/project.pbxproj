@@ -10,15 +10,6 @@
 		3C0D210B21C7E5B200904349 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D210D21C7E5B200904349 /* Main.storyboard */; };
 		3C15D44221D663A6002086F7 /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15D44121D663A6002086F7 /* constant.swift */; };
 		3C15D44521D672B6002086F7 /* FBXFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15D44421D672B6002086F7 /* FBXFileManager.swift */; };
-		F93D1AD3224DEF5C00641D2E /* Helper.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = F93D1AC8224DEF5C00641D2E /* Helper.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F93D1AD9224DEFF200641D2E /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93D1AD8224DEFF200641D2E /* HelperProtocol.swift */; };
-		F93D1ADB224DF05500641D2E /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93D1ADA224DF05500641D2E /* Helper.swift */; };
-		F93D1ADC224DF06500641D2E /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93D1AD8224DEFF200641D2E /* HelperProtocol.swift */; };
-		F93D1ADE224DF09B00641D2E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93D1ADD224DF09B00641D2E /* main.swift */; };
-		F93D1AE5224E003700641D2E /* HelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93D1AD8224DEFF200641D2E /* HelperProtocol.swift */; };
-		F93D1AE9224E0FA200641D2E /* CallBackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93D1AE8224E0FA200641D2E /* CallBackProtocol.swift */; };
-		F93D1AEA224E0FA200641D2E /* CallBackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93D1AE8224E0FA200641D2E /* CallBackProtocol.swift */; };
-		F93D1AEB224E0FA200641D2E /* CallBackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93D1AE8224E0FA200641D2E /* CallBackProtocol.swift */; };
 		F93EEDB22182D0670023F0EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EEDB12182D0670023F0EF /* AppDelegate.swift */; };
 		F93EEDB62182D0680023F0EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F93EEDB52182D0680023F0EF /* Assets.xcassets */; };
 		F93EEDC42182D0FB0023F0EF /* AppCommChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EEDC32182D0FB0023F0EF /* AppCommChannel.swift */; };
@@ -58,13 +49,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F93D1AD1224DEF5C00641D2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F93EEDA62182D0670023F0EF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F93D1AC7224DEF5C00641D2E;
-			remoteInfo = Helper;
-		};
 		F93EEDCF2182D7060023F0EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F93EEDA62182D0670023F0EF /* Project object */;
@@ -81,7 +65,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
 			dstSubfolderSpec = 16;
 			files = (
-				F93D1AD3224DEF5C00641D2E /* Helper.xpc in Embed XPC Services */,
 			);
 			name = "Embed XPC Services";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,13 +86,6 @@
 		3C0D210C21C7E5B200904349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C15D44121D663A6002086F7 /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
 		3C15D44421D672B6002086F7 /* FBXFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBXFileManager.swift; sourceTree = "<group>"; };
-		F93D1AC8224DEF5C00641D2E /* Helper.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = Helper.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
-		F93D1AD0224DEF5C00641D2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F93D1AD8224DEFF200641D2E /* HelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperProtocol.swift; sourceTree = "<group>"; };
-		F93D1ADA224DF05500641D2E /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		F93D1ADD224DF09B00641D2E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		F93D1AE2224DFBF000641D2E /* Helper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Helper.entitlements; sourceTree = "<group>"; };
-		F93D1AE8224E0FA200641D2E /* CallBackProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallBackProtocol.swift; sourceTree = "<group>"; };
 		F93EEDAE2182D0670023F0EF /* mousePlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mousePlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93EEDB12182D0670023F0EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F93EEDB52182D0680023F0EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,13 +117,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F93D1AC5224DEF5C00641D2E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F93EEDAB2182D0670023F0EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,32 +152,11 @@
 			path = manager;
 			sourceTree = "<group>";
 		};
-		F93D1AC9224DEF5C00641D2E /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				F93D1AE2224DFBF000641D2E /* Helper.entitlements */,
-				F93D1AD0224DEF5C00641D2E /* Info.plist */,
-				F93D1ADA224DF05500641D2E /* Helper.swift */,
-				F93D1ADD224DF09B00641D2E /* main.swift */,
-			);
-			path = Helper;
-			sourceTree = "<group>";
-		};
-		F93D1AD7224DEFCE00641D2E /* shared */ = {
-			isa = PBXGroup;
-			children = (
-				F93D1AD8224DEFF200641D2E /* HelperProtocol.swift */,
-				F93D1AE8224E0FA200641D2E /* CallBackProtocol.swift */,
-			);
-			path = shared;
-			sourceTree = "<group>";
-		};
 		F93EEDA52182D0670023F0EF = {
 			isa = PBXGroup;
 			children = (
 				F93EEDB02182D0670023F0EF /* mousePlus */,
 				F93EEDCA2182D7060023F0EF /* mousePlus_extension */,
-				F93D1AC9224DEF5C00641D2E /* Helper */,
 				F93EEDAF2182D0670023F0EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -218,7 +166,6 @@
 			children = (
 				F93EEDAE2182D0670023F0EF /* mousePlus.app */,
 				F93EEDC92182D7050023F0EF /* mousePlus_extension.appex */,
-				F93D1AC8224DEF5C00641D2E /* Helper.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -226,7 +173,6 @@
 		F93EEDB02182D0670023F0EF /* mousePlus */ = {
 			isa = PBXGroup;
 			children = (
-				F93D1AD7224DEFCE00641D2E /* shared */,
 				F93EEDB12182D0670023F0EF /* AppDelegate.swift */,
 				3C15D43D21D662F8002086F7 /* tool */,
 				F94F4094219EB3F7004754BA /* controller */,
@@ -292,23 +238,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F93D1AC7224DEF5C00641D2E /* Helper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F93D1AD4224DEF5C00641D2E /* Build configuration list for PBXNativeTarget "Helper" */;
-			buildPhases = (
-				F93D1AC4224DEF5C00641D2E /* Sources */,
-				F93D1AC5224DEF5C00641D2E /* Frameworks */,
-				F93D1AC6224DEF5C00641D2E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Helper;
-			productName = Helper;
-			productReference = F93D1AC8224DEF5C00641D2E /* Helper.xpc */;
-			productType = "com.apple.product-type.xpc-service";
-		};
 		F93EEDAD2182D0670023F0EF /* mousePlus */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F93EEDBE2182D0680023F0EF /* Build configuration list for PBXNativeTarget "mousePlus" */;
@@ -323,7 +252,6 @@
 			);
 			dependencies = (
 				F93EEDD02182D7060023F0EF /* PBXTargetDependency */,
-				F93D1AD2224DEF5C00641D2E /* PBXTargetDependency */,
 			);
 			name = mousePlus;
 			productName = mousePlus;
@@ -357,18 +285,6 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = ritchie;
 				TargetAttributes = {
-					F93D1AC7224DEF5C00641D2E = {
-						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.Mac = {
-								enabled = 1;
-							};
-							com.apple.Sandbox = {
-								enabled = 1;
-							};
-						};
-					};
 					F93EEDAD2182D0670023F0EF = {
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
@@ -408,19 +324,11 @@
 			targets = (
 				F93EEDAD2182D0670023F0EF /* mousePlus */,
 				F93EEDC82182D7050023F0EF /* mousePlus_extension */,
-				F93D1AC7224DEF5C00641D2E /* Helper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F93D1AC6224DEF5C00641D2E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F93EEDAC2182D0670023F0EF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -456,17 +364,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F93D1AC4224DEF5C00641D2E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F93D1AEB224E0FA200641D2E /* CallBackProtocol.swift in Sources */,
-				F93D1ADB224DF05500641D2E /* Helper.swift in Sources */,
-				F93D1ADC224DF06500641D2E /* HelperProtocol.swift in Sources */,
-				F93D1ADE224DF09B00641D2E /* main.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F93EEDAA2182D0670023F0EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -476,12 +373,10 @@
 				3C15D44521D672B6002086F7 /* FBXFileManager.swift in Sources */,
 				F93F9B462238D1600044271E /* String+Ext.swift in Sources */,
 				F93EEDDC2182DFA70023F0EF /* PreferenceWindowController.swift in Sources */,
-				F93D1AD9224DEFF200641D2E /* HelperProtocol.swift in Sources */,
 				F944F0752227C9C800A14321 /* macros.swift in Sources */,
 				F95638142186B28F000ED0A6 /* TemplateViewController.swift in Sources */,
 				F944024821831AA400123B91 /* GeneralViewController.swift in Sources */,
 				F93EEDC42182D0FB0023F0EF /* AppCommChannel.swift in Sources */,
-				F93D1AE9224E0FA200641D2E /* CallBackProtocol.swift in Sources */,
 				F94F4096219EB444004754BA /* CenterTextFieldCell.swift in Sources */,
 				F9471F4222310CC200D2962D /* config.swift in Sources */,
 				F93EEDB22182D0670023F0EF /* AppDelegate.swift in Sources */,
@@ -498,9 +393,7 @@
 				F93EEDCC2182D7060023F0EF /* FinderSync.swift in Sources */,
 				F949B5F4223B446700D7953A /* macros.swift in Sources */,
 				F9E0EC84223F4B97005F9ECA /* config.swift in Sources */,
-				F93D1AE5224E003700641D2E /* HelperProtocol.swift in Sources */,
 				F93EEDD72182D7850023F0EF /* FinderCommChannel.swift in Sources */,
-				F93D1AEA224E0FA200641D2E /* CallBackProtocol.swift in Sources */,
 				F949B5F5223B448200D7953A /* constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -508,11 +401,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F93D1AD2224DEF5C00641D2E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F93D1AC7224DEF5C00641D2E /* Helper */;
-			targetProxy = F93D1AD1224DEF5C00641D2E /* PBXContainerItemProxy */;
-		};
 		F93EEDD02182D7060023F0EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F93EEDC82182D7050023F0EF /* mousePlus_extension */;
@@ -533,51 +421,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F93D1AD5224DEF5C00641D2E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Helper/Helper.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8NMY5MX9DE;
-				INFOPLIST_FILE = Helper/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ritchie.Helper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Debug;
-		};
-		F93D1AD6224DEF5C00641D2E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Helper/Helper.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8NMY5MX9DE;
-				INFOPLIST_FILE = Helper/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = ritchie.Helper;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
 		F93EEDBC2182D0680023F0EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -776,15 +619,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F93D1AD4224DEF5C00641D2E /* Build configuration list for PBXNativeTarget "Helper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F93D1AD5224DEF5C00641D2E /* Debug */,
-				F93D1AD6224DEF5C00641D2E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		F93EEDA92182D0670023F0EF /* Build configuration list for PBXProject "mousePlus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
