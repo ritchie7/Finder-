@@ -31,11 +31,11 @@ class FinderSync: FIFinderSync {
         
         FIFinderSyncController.default().directoryURLs = [self.myFolderURL]
         
-//        let channel = FinderCommChannel.init()
+//        let channel = FinderCommChannel()
 //        channel.setup()
 //        channel.finder = self
         
-        
+//        self.getData()
 
     }
     

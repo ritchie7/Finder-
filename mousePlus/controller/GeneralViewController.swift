@@ -41,8 +41,6 @@ class GeneralViewController: NSViewController {
 
         self.preferredContentSize = view.frame.size
         
-//        finder.setup()
-        
         
         
         configData()
@@ -72,15 +70,15 @@ class GeneralViewController: NSViewController {
 //        self.testXPC()
 //        self.finder.postNotification(name: "")
         MouseUserDefult.set(sender.state, forKey: GENERAL_COPYPATH_SWITCH)
-//        self.finder.postNotification(name: kMousePlusExtensionObservingNotification)
+        self.finder.postNotification()
     }
     @IBAction func openFileAfterCreatSwitchAction(_ sender: NSButton) {
         MouseUserDefult.set(sender.state, forKey: GENERAL_FILE_CREAT_OPEN)
-//        self.finder.postNotification(name: kMousePlusExtensionObservingNotification)
+        self.finder.postNotification()
     }
     @IBAction func submenuSwitchAction(_ sender: NSButton) {
         MouseUserDefult.set(sender.state, forKey: GENERAL_SUBMENU_SWITCH)
-//        self.finder.postNotification(name: kMousePlusExtensionObservingNotification)
+        self.finder.postNotification()
     }
     @IBAction func systemConfgAction(_ sender: Any) {
         

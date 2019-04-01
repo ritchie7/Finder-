@@ -16,8 +16,8 @@ class AppCommChannel: NSObject {
 //
 //    }
     
-    func postNotification(name : String) {
-         DistributedNotificationCenter.default().postNotificationName(NSNotification.Name(rawValue: kMousePlusExtensionObservingNotification), object: "", userInfo: nil, deliverImmediately: true)
+    func postNotification() {
+        DistributedNotificationCenter.default().postNotificationName(NSNotification.Name(rawValue: kMousePlusExtensionObservingNotification), object: Bundle.main.bundleIdentifier, userInfo: nil, deliverImmediately: true)
     }
     
 //    @objc func mousePlusActionObserving(noti : Notification)  {
