@@ -9,9 +9,9 @@
 import Cocoa
 
 
-public let MouseUserDefult = UserDefaults(suiteName: USERDEFULT_NAME)!
+//public let MouseUserDefult = UserDefaults(suiteName: USERDEFULT_NAME)!
+public let MouseUserDefult = UserDefaults.init(suiteName: USERDEFULT_NAME)!
 
-   
 func configData() {
     
     if (kFIRST_INSTALL()) {
@@ -19,7 +19,7 @@ func configData() {
         MouseUserDefult.setValue("未命名文件", forKey: GENERAL_FILE_NAME)
         MouseUserDefult.set(1, forKey: GENERAL_COPYPATH_SWITCH)
         MouseUserDefult.set(1, forKey: GENERAL_FILE_CREAT_OPEN)
-        MouseUserDefult.set(0, forKey: GENERAL_SUBMENU_SWITCH)
+        MouseUserDefult.set(1, forKey: GENERAL_SUBMENU_SWITCH)
         
         // 预置模板
         let names = ["txt", "keynot", "pages", "numbers", "word", "excel", "ppt", "md"]
@@ -60,7 +60,6 @@ func configData() {
 func readCustomTemplateData() -> Array<NSDictionary> {
     
     var filesData = readsFiles(atPath: kCUSTOM_TEMPLATE_FOLDER)!
-//        let filesData = FBXFileManager.readsFiles(atPath: kCUSTOM_TEMPLATE_FOLDER)!
     var tmpData = Array<String>()
     for item in filesData {
         let path = kCUSTOM_TEMPLATE_FOLDER + "/" + item

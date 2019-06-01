@@ -14,7 +14,7 @@
 		F93EEDB62182D0680023F0EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F93EEDB52182D0680023F0EF /* Assets.xcassets */; };
 		F93EEDC42182D0FB0023F0EF /* AppCommChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EEDC32182D0FB0023F0EF /* AppCommChannel.swift */; };
 		F93EEDCC2182D7060023F0EF /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EEDCB2182D7060023F0EF /* FinderSync.swift */; };
-		F93EEDD12182D7060023F0EF /* mousePlus_extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F93EEDC92182D7050023F0EF /* mousePlus_extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F93EEDD12182D7060023F0EF /* finderPlus_extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F93EEDC92182D7050023F0EF /* finderPlus_extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F93EEDD72182D7850023F0EF /* FinderCommChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EEDD62182D7850023F0EF /* FinderCommChannel.swift */; };
 		F93EEDDC2182DFA70023F0EF /* PreferenceWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EEDDA2182DFA70023F0EF /* PreferenceWindowController.swift */; };
 		F93F40262242358500F9B52D /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93F9B452238D1600044271E /* String+Ext.swift */; };
@@ -75,7 +75,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				F93EEDD12182D7060023F0EF /* mousePlus_extension.appex in Embed App Extensions */,
+				F93EEDD12182D7060023F0EF /* finderPlus_extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,13 +86,13 @@
 		3C0D210C21C7E5B200904349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C15D44121D663A6002086F7 /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
 		3C15D44421D672B6002086F7 /* FBXFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBXFileManager.swift; sourceTree = "<group>"; };
-		F93EEDAE2182D0670023F0EF /* mousePlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mousePlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93EEDAE2182D0670023F0EF /* Finder+.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Finder+.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93EEDB12182D0670023F0EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F93EEDB52182D0680023F0EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F93EEDBA2182D0680023F0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F93EEDBB2182D0680023F0EF /* mousePlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mousePlus.entitlements; sourceTree = "<group>"; };
 		F93EEDC32182D0FB0023F0EF /* AppCommChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCommChannel.swift; sourceTree = "<group>"; };
-		F93EEDC92182D7050023F0EF /* mousePlus_extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = mousePlus_extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93EEDC92182D7050023F0EF /* finderPlus_extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = finderPlus_extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93EEDCB2182D7060023F0EF /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
 		F93EEDCD2182D7060023F0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F93EEDCE2182D7060023F0EF /* mousePlus_extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mousePlus_extension.entitlements; sourceTree = "<group>"; };
@@ -164,8 +164,8 @@
 		F93EEDAF2182D0670023F0EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F93EEDAE2182D0670023F0EF /* mousePlus.app */,
-				F93EEDC92182D7050023F0EF /* mousePlus_extension.appex */,
+				F93EEDAE2182D0670023F0EF /* Finder+.app */,
+				F93EEDC92182D7050023F0EF /* finderPlus_extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -238,9 +238,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F93EEDAD2182D0670023F0EF /* mousePlus */ = {
+		F93EEDAD2182D0670023F0EF /* Finder+ */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F93EEDBE2182D0680023F0EF /* Build configuration list for PBXNativeTarget "mousePlus" */;
+			buildConfigurationList = F93EEDBE2182D0680023F0EF /* Build configuration list for PBXNativeTarget "Finder+" */;
 			buildPhases = (
 				F93EEDAA2182D0670023F0EF /* Sources */,
 				F93EEDAB2182D0670023F0EF /* Frameworks */,
@@ -253,14 +253,14 @@
 			dependencies = (
 				F93EEDD02182D7060023F0EF /* PBXTargetDependency */,
 			);
-			name = mousePlus;
+			name = "Finder+";
 			productName = mousePlus;
-			productReference = F93EEDAE2182D0670023F0EF /* mousePlus.app */;
+			productReference = F93EEDAE2182D0670023F0EF /* Finder+.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F93EEDC82182D7050023F0EF /* mousePlus_extension */ = {
+		F93EEDC82182D7050023F0EF /* finderPlus_extension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F93EEDD22182D7060023F0EF /* Build configuration list for PBXNativeTarget "mousePlus_extension" */;
+			buildConfigurationList = F93EEDD22182D7060023F0EF /* Build configuration list for PBXNativeTarget "finderPlus_extension" */;
 			buildPhases = (
 				F93EEDC52182D7050023F0EF /* Sources */,
 				F93EEDC62182D7050023F0EF /* Frameworks */,
@@ -270,9 +270,9 @@
 			);
 			dependencies = (
 			);
-			name = mousePlus_extension;
+			name = finderPlus_extension;
 			productName = mousePlus_extension;
-			productReference = F93EEDC92182D7050023F0EF /* mousePlus_extension.appex */;
+			productReference = F93EEDC92182D7050023F0EF /* finderPlus_extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -309,7 +309,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F93EEDA92182D0670023F0EF /* Build configuration list for PBXProject "mousePlus" */;
+			buildConfigurationList = F93EEDA92182D0670023F0EF /* Build configuration list for PBXProject "Finder+" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -322,8 +322,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F93EEDAD2182D0670023F0EF /* mousePlus */,
-				F93EEDC82182D7050023F0EF /* mousePlus_extension */,
+				F93EEDAD2182D0670023F0EF /* Finder+ */,
+				F93EEDC82182D7050023F0EF /* finderPlus_extension */,
 			);
 		};
 /* End PBXProject section */
@@ -403,7 +403,7 @@
 /* Begin PBXTargetDependency section */
 		F93EEDD02182D7060023F0EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F93EEDC82182D7050023F0EF /* mousePlus_extension */;
+			target = F93EEDC82182D7050023F0EF /* finderPlus_extension */;
 			targetProxy = F93EEDCF2182D7060023F0EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -542,16 +542,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = mousePlus/mousePlus.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8NMY5MX9DE;
+				DEVELOPMENT_TEAM = VDB5CYS965;
 				INFOPLIST_FILE = mousePlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ritchie.finder;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ritchie.finderPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -562,16 +565,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = mousePlus/mousePlus.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8NMY5MX9DE;
+				DEVELOPMENT_TEAM = VDB5CYS965;
 				INFOPLIST_FILE = mousePlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ritchie.finder;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ritchie.finderPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
@@ -580,17 +586,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = mousePlus_extension/mousePlus_extension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8NMY5MX9DE;
+				DEVELOPMENT_TEAM = VDB5CYS965;
 				INFOPLIST_FILE = mousePlus_extension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ritchie.finder.extension;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ritchie.finderPlus.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 			};
@@ -600,17 +609,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = mousePlus_extension/mousePlus_extension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 8NMY5MX9DE;
+				DEVELOPMENT_TEAM = VDB5CYS965;
 				INFOPLIST_FILE = mousePlus_extension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ritchie.finder.extension;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ritchie.finderPlus.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 			};
@@ -619,7 +631,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F93EEDA92182D0670023F0EF /* Build configuration list for PBXProject "mousePlus" */ = {
+		F93EEDA92182D0670023F0EF /* Build configuration list for PBXProject "Finder+" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F93EEDBC2182D0680023F0EF /* Debug */,
@@ -628,7 +640,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F93EEDBE2182D0680023F0EF /* Build configuration list for PBXNativeTarget "mousePlus" */ = {
+		F93EEDBE2182D0680023F0EF /* Build configuration list for PBXNativeTarget "Finder+" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F93EEDBF2182D0680023F0EF /* Debug */,
@@ -637,7 +649,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F93EEDD22182D7060023F0EF /* Build configuration list for PBXNativeTarget "mousePlus_extension" */ = {
+		F93EEDD22182D7060023F0EF /* Build configuration list for PBXNativeTarget "finderPlus_extension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F93EEDD32182D7060023F0EF /* Debug */,

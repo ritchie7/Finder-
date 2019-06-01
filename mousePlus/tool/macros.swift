@@ -8,7 +8,7 @@
 
 import Foundation
 
-let USERDEFULT_NAME = "group.ritchie.feng.finderPlus"
+let USERDEFULT_NAME = "VDB5CYS965.group.ritchie.finderPlus"
 
 let GENERAL_COPYPATH_SWITCH = "com.ritchie.mouse.copy_path_switch"
 let GENERAL_FILE_NAME = "com.ritchie.mouse.file_name"

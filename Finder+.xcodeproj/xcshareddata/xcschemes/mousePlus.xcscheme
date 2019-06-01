@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F93EEDAD2182D0670023F0EF"
-               BuildableName = "mousePlus.app"
-               BlueprintName = "mousePlus"
-               ReferencedContainer = "container:mousePlus.xcodeproj">
+               BuildableName = "Finder+.app"
+               BlueprintName = "Finder+"
+               ReferencedContainer = "container:Finder+.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F93EEDAD2182D0670023F0EF"
-            BuildableName = "mousePlus.app"
-            BlueprintName = "mousePlus"
-            ReferencedContainer = "container:mousePlus.xcodeproj">
+            BuildableName = "Finder+.app"
+            BlueprintName = "Finder+"
+            ReferencedContainer = "container:Finder+.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F93EEDAD2182D0670023F0EF"
-            BuildableName = "mousePlus.app"
-            BlueprintName = "mousePlus"
-            ReferencedContainer = "container:mousePlus.xcodeproj">
+            BuildableName = "Finder+.app"
+            BlueprintName = "Finder+"
+            ReferencedContainer = "container:Finder+.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F93EEDAD2182D0670023F0EF"
-            BuildableName = "mousePlus.app"
-            BlueprintName = "mousePlus"
-            ReferencedContainer = "container:mousePlus.xcodeproj">
+            BuildableName = "Finder+.app"
+            BlueprintName = "Finder+"
+            ReferencedContainer = "container:Finder+.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

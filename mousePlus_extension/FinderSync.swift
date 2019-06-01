@@ -43,9 +43,9 @@ class FinderSync: FIFinderSync {
     override func menu(for menuKind: FIMenuKind) -> NSMenu {
         self.getData()
         if self.submenuState == 1 { // 子菜单方式显示
-            let menu = NSMenu(title: "mouse+")
+            let menu = NSMenu(title: "finder+")
             let subMenu1 = self.subMenu()
-            let item = NSMenuItem(title: "mouse+", action: nil, keyEquivalent: "")
+            let item = NSMenuItem(title: "finder+", action: nil, keyEquivalent: "")
             menu.addItem(item)
             menu.setSubmenu(subMenu1, for: item)
             return menu

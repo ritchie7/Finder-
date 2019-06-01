@@ -2,7 +2,7 @@
 <Scheme
    LastUpgradeVersion = "1010"
    wasCreatedForAppExtension = "YES"
-   version = "2.0">
+   version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F93EEDC82182D7050023F0EF"
-               BuildableName = "mousePlus_extension.appex"
-               BlueprintName = "mousePlus_extension"
-               ReferencedContainer = "container:mousePlus.xcodeproj">
+               BuildableName = "finderPlus_extension.appex"
+               BlueprintName = "finderPlus_extension"
+               ReferencedContainer = "container:Finder+.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -30,9 +30,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F93EEDAD2182D0670023F0EF"
-               BuildableName = "mousePlus.app"
-               BlueprintName = "mousePlus"
-               ReferencedContainer = "container:mousePlus.xcodeproj">
+               BuildableName = "Finder+.app"
+               BlueprintName = "Finder+"
+               ReferencedContainer = "container:Finder+.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,9 +48,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F93EEDC82182D7050023F0EF"
-            BuildableName = "mousePlus_extension.appex"
-            BlueprintName = "mousePlus_extension"
-            ReferencedContainer = "container:mousePlus.xcodeproj">
+            BuildableName = "finderPlus_extension.appex"
+            BlueprintName = "finderPlus_extension"
+            ReferencedContainer = "container:Finder+.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,22 +65,17 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
-      allowLocationSimulation = "YES"
-      launchAutomaticallySubstyle = "2">
-      <RemoteRunnable
-         runnableDebuggingMode = "2"
-         BundleIdentifier = "com.apple.finder"
-         RemotePath = "/Finder">
-      </RemoteRunnable>
-      <MacroExpansion>
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F93EEDAD2182D0670023F0EF"
-            BuildableName = "mousePlus.app"
-            BlueprintName = "mousePlus"
-            ReferencedContainer = "container:mousePlus.xcodeproj">
+            BlueprintIdentifier = "F93EEDC82182D7050023F0EF"
+            BuildableName = "finderPlus_extension.appex"
+            BlueprintName = "finderPlus_extension"
+            ReferencedContainer = "container:Finder+.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -96,9 +91,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F93EEDAD2182D0670023F0EF"
-            BuildableName = "mousePlus.app"
-            BlueprintName = "mousePlus"
-            ReferencedContainer = "container:mousePlus.xcodeproj">
+            BuildableName = "Finder+.app"
+            BlueprintName = "Finder+"
+            ReferencedContainer = "container:Finder+.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
