@@ -48,8 +48,9 @@ class GeneralViewController: NSViewController {
         // 文本框
         self.fileNameTextField.refusesFirstResponder = true // 放弃第一响应者
         
-        let name: String = MouseUserDefult.string(forKey: GENERAL_FILE_NAME)!
-        self.fileNameTextField.stringValue = name
+//        let name: String = MouseUserDefult.string(forKey: GENERAL_FILE_NAME)!
+        let name = MouseUserDefult.value(forKey: GENERAL_FILE_NAME);
+        self.fileNameTextField.stringValue = name as! String
         
         // 拷贝路径
         let copyState: NSInteger = MouseUserDefult.integer(forKey: GENERAL_COPYPATH_SWITCH)

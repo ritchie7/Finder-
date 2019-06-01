@@ -137,8 +137,8 @@
 		3C15D43D21D662F8002086F7 /* tool */ = {
 			isa = PBXGroup;
 			children = (
-				3C15D44121D663A6002086F7 /* constant.swift */,
 				F944F0742227C9C800A14321 /* macros.swift */,
+				3C15D44121D663A6002086F7 /* constant.swift */,
 				F93F9B452238D1600044271E /* String+Ext.swift */,
 			);
 			path = tool;
@@ -550,7 +550,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ritchie.mousePlus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ritchie.finder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -570,7 +570,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ritchie.mousePlus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ritchie.finder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -589,7 +589,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ritchie.mousePlusExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ritchie.finder.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -609,7 +609,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ritchie.mousePlusExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ritchie.finder.extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
