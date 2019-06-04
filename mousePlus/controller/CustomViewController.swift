@@ -142,7 +142,7 @@ class CustomViewController: NSViewController {
             let success = self.copyFile(sourcePath: url!, toPath: toPath)
             
             if success {
-                let data = ["url":toPath.absoluteString]
+                let data = ["url":toPath.path.removingPercentEncoding];
                 
                 self.datas.append(data as NSDictionary)
                 
@@ -178,6 +178,7 @@ class CustomViewController: NSViewController {
                     self.tableView.reloadData()
                     
                 }
+                
             }
         }
         

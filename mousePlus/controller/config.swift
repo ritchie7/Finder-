@@ -14,7 +14,7 @@ public let MouseUserDefult = UserDefaults.init(suiteName: USERDEFULT_NAME)!
 
 func configData() {
     
-    if (kFIRST_INSTALL()) {
+    if (!kFIRST_INSTALL()) {
         
         MouseUserDefult.setValue("未命名文件", forKey: GENERAL_FILE_NAME)
         MouseUserDefult.set(1, forKey: GENERAL_COPYPATH_SWITCH)
