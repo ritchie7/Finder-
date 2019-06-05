@@ -50,8 +50,11 @@ class FinderSync: FIFinderSync {
             menu.setSubmenu(subMenu1, for: item)
             return menu
         }
-        
+
         return subMenu()
+//        let menu = NSMenu(title: "test")
+//        menu.addItem(withTitle: "test3", action: #selector(sampleAction(_:)), keyEquivalent: "")
+//        return menu
     }
     
     
@@ -62,7 +65,9 @@ class FinderSync: FIFinderSync {
         pasteboard.setString(currentURL, forType: NSPasteboard.PasteboardType.string)
     }
     
-
+    @IBAction func sampleAction(_ sender: AnyObject?) {
+        
+    }
     
     @objc func creatPreinstallFile(_ sender: NSMenuItem?) {
         let title = sender?.title

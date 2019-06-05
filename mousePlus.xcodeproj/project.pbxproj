@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C0D210B21C7E5B200904349 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C0D210D21C7E5B200904349 /* Main.storyboard */; };
+		3C15D44221D663A6002086F7 /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15D44121D663A6002086F7 /* constant.swift */; };
+		3C15D44521D672B6002086F7 /* FBXFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15D44421D672B6002086F7 /* FBXFileManager.swift */; };
+		F93EEDB22182D0670023F0EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EEDB12182D0670023F0EF /* AppDelegate.swift */; };
+		F93EEDB62182D0680023F0EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F93EEDB52182D0680023F0EF /* Assets.xcassets */; };
+		F93EEDC42182D0FB0023F0EF /* AppCommChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EEDC32182D0FB0023F0EF /* AppCommChannel.swift */; };
+		F93EEDCC2182D7060023F0EF /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EEDCB2182D7060023F0EF /* FinderSync.swift */; };
+		F93EEDD12182D7060023F0EF /* mousePlus_extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F93EEDC92182D7050023F0EF /* mousePlus_extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F93EEDD72182D7850023F0EF /* FinderCommChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EEDD62182D7850023F0EF /* FinderCommChannel.swift */; };
+		F93EEDDC2182DFA70023F0EF /* PreferenceWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93EEDDA2182DFA70023F0EF /* PreferenceWindowController.swift */; };
+		F93F40262242358500F9B52D /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93F9B452238D1600044271E /* String+Ext.swift */; };
+		F93F9B462238D1600044271E /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93F9B452238D1600044271E /* String+Ext.swift */; };
+		F944024821831AA400123B91 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944024621831AA400123B91 /* GeneralViewController.swift */; };
+		F944024D21831E3800123B91 /* PreferenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944024C21831E3800123B91 /* PreferenceViewController.swift */; };
+		F944F0752227C9C800A14321 /* macros.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944F0742227C9C800A14321 /* macros.swift */; };
+		F9471F4222310CC200D2962D /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9471F4122310CC200D2962D /* config.swift */; };
+		F949B5F4223B446700D7953A /* macros.swift in Sources */ = {isa = PBXBuildFile; fileRef = F944F0742227C9C800A14321 /* macros.swift */; };
+		F949B5F5223B448200D7953A /* constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15D44121D663A6002086F7 /* constant.swift */; };
+		F94F4096219EB444004754BA /* CenterTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F4095219EB444004754BA /* CenterTextFieldCell.swift */; };
+		F94F4098219ED36D004754BA /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94F4097219ED36D004754BA /* CustomViewController.swift */; };
+		F95638142186B28F000ED0A6 /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F95638132186B28F000ED0A6 /* TemplateViewController.swift */; };
+		F973F3FB219BDF30008D3430 /* md.md in Resources */ = {isa = PBXBuildFile; fileRef = F973F3E5219BDF30008D3430 /* md.md */; };
+		F973F3FC219BDF30008D3430 /* md.md in Resources */ = {isa = PBXBuildFile; fileRef = F973F3E5219BDF30008D3430 /* md.md */; };
+		F973F3FF219BDF30008D3430 /* ppt.pptx in Resources */ = {isa = PBXBuildFile; fileRef = F973F3E7219BDF30008D3430 /* ppt.pptx */; };
+		F973F400219BDF30008D3430 /* ppt.pptx in Resources */ = {isa = PBXBuildFile; fileRef = F973F3E7219BDF30008D3430 /* ppt.pptx */; };
+		F973F405219BDF30008D3430 /* pages.pages in Resources */ = {isa = PBXBuildFile; fileRef = F973F3EA219BDF30008D3430 /* pages.pages */; };
+		F973F406219BDF30008D3430 /* pages.pages in Resources */ = {isa = PBXBuildFile; fileRef = F973F3EA219BDF30008D3430 /* pages.pages */; };
+		F973F407219BDF30008D3430 /* excel.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = F973F3EB219BDF30008D3430 /* excel.xlsx */; };
+		F973F408219BDF30008D3430 /* excel.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = F973F3EB219BDF30008D3430 /* excel.xlsx */; };
+		F973F409219BDF30008D3430 /* word.docx in Resources */ = {isa = PBXBuildFile; fileRef = F973F3EC219BDF30008D3430 /* word.docx */; };
+		F973F40A219BDF30008D3430 /* word.docx in Resources */ = {isa = PBXBuildFile; fileRef = F973F3EC219BDF30008D3430 /* word.docx */; };
+		F973F40B219BDF30008D3430 /* numbers.numbers in Resources */ = {isa = PBXBuildFile; fileRef = F973F3ED219BDF30008D3430 /* numbers.numbers */; };
+		F973F40C219BDF30008D3430 /* numbers.numbers in Resources */ = {isa = PBXBuildFile; fileRef = F973F3ED219BDF30008D3430 /* numbers.numbers */; };
+		F973F40D219BDF30008D3430 /* txt.txt in Resources */ = {isa = PBXBuildFile; fileRef = F973F3EE219BDF30008D3430 /* txt.txt */; };
+		F973F40E219BDF30008D3430 /* txt.txt in Resources */ = {isa = PBXBuildFile; fileRef = F973F3EE219BDF30008D3430 /* txt.txt */; };
+		F973F40F219BDF30008D3430 /* keynot.key in Resources */ = {isa = PBXBuildFile; fileRef = F973F3EF219BDF30008D3430 /* keynot.key */; };
+		F973F410219BDF30008D3430 /* keynot.key in Resources */ = {isa = PBXBuildFile; fileRef = F973F3EF219BDF30008D3430 /* keynot.key */; };
+		F9E0EC82223F4B20005F9ECA /* FBXFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15D44421D672B6002086F7 /* FBXFileManager.swift */; };
+		F9E0EC84223F4B97005F9ECA /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9471F4122310CC200D2962D /* config.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F93EEDCF2182D7060023F0EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F93EEDA62182D0670023F0EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F93EEDC82182D7050023F0EF;
+			remoteInfo = mousePlus_extension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F93D1A35224DCE3000641D2E /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93EEDD52182D7060023F0EF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F93EEDD12182D7060023F0EF /* mousePlus_extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3C0D210C21C7E5B200904349 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3C15D44121D663A6002086F7 /* constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constant.swift; sourceTree = "<group>"; };
+		3C15D44421D672B6002086F7 /* FBXFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBXFileManager.swift; sourceTree = "<group>"; };
+		F93EEDAE2182D0670023F0EF /* mousePlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mousePlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93EEDB12182D0670023F0EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F93EEDB52182D0680023F0EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F93EEDBA2182D0680023F0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93EEDBB2182D0680023F0EF /* mousePlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mousePlus.entitlements; sourceTree = "<group>"; };
+		F93EEDC32182D0FB0023F0EF /* AppCommChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCommChannel.swift; sourceTree = "<group>"; };
+		F93EEDC92182D7050023F0EF /* mousePlus_extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = mousePlus_extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93EEDCB2182D7060023F0EF /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
+		F93EEDCD2182D7060023F0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F93EEDCE2182D7060023F0EF /* mousePlus_extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mousePlus_extension.entitlements; sourceTree = "<group>"; };
+		F93EEDD62182D7850023F0EF /* FinderCommChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderCommChannel.swift; sourceTree = "<group>"; };
+		F93EEDDA2182DFA70023F0EF /* PreferenceWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceWindowController.swift; sourceTree = "<group>"; };
+		F93F9B452238D1600044271E /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		F944024621831AA400123B91 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
+		F944024C21831E3800123B91 /* PreferenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceViewController.swift; sourceTree = "<group>"; };
+		F944F0742227C9C800A14321 /* macros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macros.swift; sourceTree = "<group>"; };
+		F9471F4122310CC200D2962D /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		F94F4095219EB444004754BA /* CenterTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterTextFieldCell.swift; sourceTree = "<group>"; };
+		F94F4097219ED36D004754BA /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		F95638132186B28F000ED0A6 /* TemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateViewController.swift; sourceTree = "<group>"; };
+		F973F3E5219BDF30008D3430 /* md.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = md.md; sourceTree = "<group>"; };
+		F973F3E7219BDF30008D3430 /* ppt.pptx */ = {isa = PBXFileReference; lastKnownFileType = file; path = ppt.pptx; sourceTree = "<group>"; };
+		F973F3EA219BDF30008D3430 /* pages.pages */ = {isa = PBXFileReference; lastKnownFileType = file; path = pages.pages; sourceTree = "<group>"; };
+		F973F3EB219BDF30008D3430 /* excel.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = excel.xlsx; sourceTree = "<group>"; };
+		F973F3EC219BDF30008D3430 /* word.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = word.docx; sourceTree = "<group>"; };
+		F973F3ED219BDF30008D3430 /* numbers.numbers */ = {isa = PBXFileReference; lastKnownFileType = file; path = numbers.numbers; sourceTree = "<group>"; };
+		F973F3EE219BDF30008D3430 /* txt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = txt.txt; sourceTree = "<group>"; };
+		F973F3EF219BDF30008D3430 /* keynot.key */ = {isa = PBXFileReference; lastKnownFileType = file; path = keynot.key; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F93EEDAB2182D0670023F0EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93EEDC62182D7050023F0EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C15D43D21D662F8002086F7 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				F944F0742227C9C800A14321 /* macros.swift */,
+				3C15D44121D663A6002086F7 /* constant.swift */,
+				F93F9B452238D1600044271E /* String+Ext.swift */,
+			);
+			path = tool;
+			sourceTree = "<group>";
+		};
+		3C15D44321D6726C002086F7 /* manager */ = {
+			isa = PBXGroup;
+			children = (
+				3C15D44421D672B6002086F7 /* FBXFileManager.swift */,
+			);
+			path = manager;
+			sourceTree = "<group>";
+		};
+		F93EEDA52182D0670023F0EF = {
+			isa = PBXGroup;
+			children = (
+				F93EEDB02182D0670023F0EF /* mousePlus */,
+				F93EEDCA2182D7060023F0EF /* mousePlus_extension */,
+				F93EEDAF2182D0670023F0EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F93EEDAF2182D0670023F0EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F93EEDAE2182D0670023F0EF /* mousePlus.app */,
+				F93EEDC92182D7050023F0EF /* mousePlus_extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F93EEDB02182D0670023F0EF /* mousePlus */ = {
+			isa = PBXGroup;
+			children = (
+				F93EEDB12182D0670023F0EF /* AppDelegate.swift */,
+				3C15D43D21D662F8002086F7 /* tool */,
+				F94F4094219EB3F7004754BA /* controller */,
+				F94F4093219EB3EE004754BA /* view */,
+				3C15D44321D6726C002086F7 /* manager */,
+				F93EEDB52182D0680023F0EF /* Assets.xcassets */,
+				3C0D210D21C7E5B200904349 /* Main.storyboard */,
+				F93EEDBA2182D0680023F0EF /* Info.plist */,
+				F93EEDBB2182D0680023F0EF /* mousePlus.entitlements */,
+				F973F3E0219BDF30008D3430 /* Templates */,
+			);
+			path = mousePlus;
+			sourceTree = "<group>";
+		};
+		F93EEDCA2182D7060023F0EF /* mousePlus_extension */ = {
+			isa = PBXGroup;
+			children = (
+				F93EEDCB2182D7060023F0EF /* FinderSync.swift */,
+				F93EEDD62182D7850023F0EF /* FinderCommChannel.swift */,
+				F93EEDCD2182D7060023F0EF /* Info.plist */,
+				F93EEDCE2182D7060023F0EF /* mousePlus_extension.entitlements */,
+			);
+			path = mousePlus_extension;
+			sourceTree = "<group>";
+		};
+		F94F4093219EB3EE004754BA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F94F4095219EB444004754BA /* CenterTextFieldCell.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		F94F4094219EB3F7004754BA /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				F93EEDC32182D0FB0023F0EF /* AppCommChannel.swift */,
+				F93EEDDA2182DFA70023F0EF /* PreferenceWindowController.swift */,
+				F944024C21831E3800123B91 /* PreferenceViewController.swift */,
+				F944024621831AA400123B91 /* GeneralViewController.swift */,
+				F95638132186B28F000ED0A6 /* TemplateViewController.swift */,
+				F94F4097219ED36D004754BA /* CustomViewController.swift */,
+				F9471F4122310CC200D2962D /* config.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		F973F3E0219BDF30008D3430 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				F973F3E5219BDF30008D3430 /* md.md */,
+				F973F3E7219BDF30008D3430 /* ppt.pptx */,
+				F973F3EA219BDF30008D3430 /* pages.pages */,
+				F973F3EB219BDF30008D3430 /* excel.xlsx */,
+				F973F3EC219BDF30008D3430 /* word.docx */,
+				F973F3ED219BDF30008D3430 /* numbers.numbers */,
+				F973F3EE219BDF30008D3430 /* txt.txt */,
+				F973F3EF219BDF30008D3430 /* keynot.key */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F93EEDAD2182D0670023F0EF /* mousePlus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F93EEDBE2182D0680023F0EF /* Build configuration list for PBXNativeTarget "mousePlus" */;
+			buildPhases = (
+				F93EEDAA2182D0670023F0EF /* Sources */,
+				F93EEDAB2182D0670023F0EF /* Frameworks */,
+				F93EEDAC2182D0670023F0EF /* Resources */,
+				F93EEDD52182D7060023F0EF /* Embed App Extensions */,
+				F93D1A35224DCE3000641D2E /* Embed XPC Services */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F93EEDD02182D7060023F0EF /* PBXTargetDependency */,
+			);
+			name = mousePlus;
+			productName = mousePlus;
+			productReference = F93EEDAE2182D0670023F0EF /* mousePlus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F93EEDC82182D7050023F0EF /* mousePlus_extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F93EEDD22182D7060023F0EF /* Build configuration list for PBXNativeTarget "mousePlus_extension" */;
+			buildPhases = (
+				F93EEDC52182D7050023F0EF /* Sources */,
+				F93EEDC62182D7050023F0EF /* Frameworks */,
+				F93EEDC72182D7050023F0EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = mousePlus_extension;
+			productName = mousePlus_extension;
+			productReference = F93EEDC92182D7050023F0EF /* mousePlus_extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F93EEDA62182D0670023F0EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = ritchie;
+				TargetAttributes = {
+					F93EEDAD2182D0670023F0EF = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+					F93EEDC82182D7050023F0EF = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = F93EEDA92182D0670023F0EF /* Build configuration list for PBXProject "mousePlus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F93EEDA52182D0670023F0EF;
+			productRefGroup = F93EEDAF2182D0670023F0EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F93EEDAD2182D0670023F0EF /* mousePlus */,
+				F93EEDC82182D7050023F0EF /* mousePlus_extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F93EEDAC2182D0670023F0EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F973F40D219BDF30008D3430 /* txt.txt in Resources */,
+				F973F40F219BDF30008D3430 /* keynot.key in Resources */,
+				F973F40B219BDF30008D3430 /* numbers.numbers in Resources */,
+				F93EEDB62182D0680023F0EF /* Assets.xcassets in Resources */,
+				F973F3FB219BDF30008D3430 /* md.md in Resources */,
+				F973F3FF219BDF30008D3430 /* ppt.pptx in Resources */,
+				F973F409219BDF30008D3430 /* word.docx in Resources */,
+				3C0D210B21C7E5B200904349 /* Main.storyboard in Resources */,
+				F973F405219BDF30008D3430 /* pages.pages in Resources */,
+				F973F407219BDF30008D3430 /* excel.xlsx in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93EEDC72182D7050023F0EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F973F406219BDF30008D3430 /* pages.pages in Resources */,
+				F973F40C219BDF30008D3430 /* numbers.numbers in Resources */,
+				F973F3FC219BDF30008D3430 /* md.md in Resources */,
+				F973F40E219BDF30008D3430 /* txt.txt in Resources */,
+				F973F400219BDF30008D3430 /* ppt.pptx in Resources */,
+				F973F408219BDF30008D3430 /* excel.xlsx in Resources */,
+				F973F40A219BDF30008D3430 /* word.docx in Resources */,
+				F973F410219BDF30008D3430 /* keynot.key in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F93EEDAA2182D0670023F0EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F944024D21831E3800123B91 /* PreferenceViewController.swift in Sources */,
+				3C15D44221D663A6002086F7 /* constant.swift in Sources */,
+				3C15D44521D672B6002086F7 /* FBXFileManager.swift in Sources */,
+				F93F9B462238D1600044271E /* String+Ext.swift in Sources */,
+				F93EEDDC2182DFA70023F0EF /* PreferenceWindowController.swift in Sources */,
+				F944F0752227C9C800A14321 /* macros.swift in Sources */,
+				F95638142186B28F000ED0A6 /* TemplateViewController.swift in Sources */,
+				F944024821831AA400123B91 /* GeneralViewController.swift in Sources */,
+				F93EEDC42182D0FB0023F0EF /* AppCommChannel.swift in Sources */,
+				F94F4096219EB444004754BA /* CenterTextFieldCell.swift in Sources */,
+				F9471F4222310CC200D2962D /* config.swift in Sources */,
+				F93EEDB22182D0670023F0EF /* AppDelegate.swift in Sources */,
+				F94F4098219ED36D004754BA /* CustomViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F93EEDC52182D7050023F0EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E0EC82223F4B20005F9ECA /* FBXFileManager.swift in Sources */,
+				F93F40262242358500F9B52D /* String+Ext.swift in Sources */,
+				F93EEDCC2182D7060023F0EF /* FinderSync.swift in Sources */,
+				F949B5F4223B446700D7953A /* macros.swift in Sources */,
+				F9E0EC84223F4B97005F9ECA /* config.swift in Sources */,
+				F93EEDD72182D7850023F0EF /* FinderCommChannel.swift in Sources */,
+				F949B5F5223B448200D7953A /* constant.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F93EEDD02182D7060023F0EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F93EEDC82182D7050023F0EF /* mousePlus_extension */;
+			targetProxy = F93EEDCF2182D7060023F0EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3C0D210D21C7E5B200904349 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C0D210C21C7E5B200904349 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F93EEDBC2182D0680023F0EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F93EEDBD2182D0680023F0EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		F93EEDBF2182D0680023F0EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = mousePlus/mousePlus.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VDB5CYS965;
+				INFOPLIST_FILE = mousePlus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ritchie.finderPlus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		F93EEDC02182D0680023F0EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = mousePlus/mousePlus.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VDB5CYS965;
+				INFOPLIST_FILE = mousePlus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ritchie.finderPlus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		F93EEDD32182D7060023F0EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = mousePlus_extension/mousePlus_extension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VDB5CYS965;
+				INFOPLIST_FILE = mousePlus_extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ritchie.finderPlus.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		F93EEDD42182D7060023F0EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = mousePlus_extension/mousePlus_extension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VDB5CYS965;
+				INFOPLIST_FILE = mousePlus_extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ritchie.finderPlus.extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F93EEDA92182D0670023F0EF /* Build configuration list for PBXProject "mousePlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93EEDBC2182D0680023F0EF /* Debug */,
+				F93EEDBD2182D0680023F0EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F93EEDBE2182D0680023F0EF /* Build configuration list for PBXNativeTarget "mousePlus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93EEDBF2182D0680023F0EF /* Debug */,
+				F93EEDC02182D0680023F0EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F93EEDD22182D7060023F0EF /* Build configuration list for PBXNativeTarget "mousePlus_extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F93EEDD32182D7060023F0EF /* Debug */,
+				F93EEDD42182D7060023F0EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F93EEDA62182D0670023F0EF /* Project object */;
+}
