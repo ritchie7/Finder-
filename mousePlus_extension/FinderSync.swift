@@ -109,7 +109,10 @@ class FinderSync: FIFinderSync {
                     do {
                         
                         try FileManager.default.copyItem(atPath: url.path, toPath: dstURL!)
-                        
+                        if self.creatOpenState == 1
+                        {
+                            NSWorkspace.shared.openFile(dstURL!)
+                        }
                     } catch {
                         kALERT(error.localizedDescription)
 
