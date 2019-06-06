@@ -11,9 +11,11 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
+    var mainWindow: NSWindow!
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
-        
+        mainWindow = NSApplication.shared.windows[0] 
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -25,16 +27,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
-        if flag
+        if !flag
         {
-            return false
+            mainWindow.makeKeyAndOrderFront(nil)
+            
         }
-        else
-        {
-            NSApplication.shared.mainWindow?.makeKeyAndOrderFront(self)
-            return true
-        }
-        
+        return true
     }
     
     @IBAction func preerencesEvent(_ sender: Any) {

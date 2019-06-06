@@ -19,9 +19,10 @@ class PreferenceWindowController: NSWindowController, NSWindowDelegate {
 
     }
     
-    func windowShouldClose(_ sender: NSWindow) -> Bool {
-        
-        exit(0)
-        
-    }
+//    func windowShouldClose(_ sender: NSWindow) -> Bool {
+//
+//        exit(0)
+//
+//    }
+//    func appl
 }
