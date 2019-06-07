@@ -140,11 +140,11 @@ class FinderSync: FIFinderSync {
                 
             }
         }
-        return URL.init(string: "Finder+")!
+        return URL.init(string: "folder+")!
     }
     
     func subMenu() -> NSMenu {
-        let menu = NSMenu(title: "Finder+")
+        let menu = NSMenu(title: "folder+")
         
         if self.copyState == 1 {
             menu.addItem(withTitle: "拷贝路径", action:#selector(copyPath(_:)) , keyEquivalent: "")
