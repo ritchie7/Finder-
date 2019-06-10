@@ -30,7 +30,7 @@ class FinderSync: FIFinderSync {
         
         
         FIFinderSyncController.default().directoryURLs = [self.myFolderURL]
-        
+        configData()
 //        let channel = FinderCommChannel()
 //        channel.setup()
 //        channel.finder = self
